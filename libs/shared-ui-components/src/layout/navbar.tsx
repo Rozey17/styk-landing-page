@@ -11,8 +11,9 @@ export function Navbar() {
         <nav className="container flex justify-between items-center z-20">
           <div className="my-5 lg:my-6">
             <img
-              src="/images/photo_2021-09-15_17-19-51.png"
+              src="/images/photo_2021-09-15_17-19-51.jpg"
               alt="easybank logo"
+              className="h-8 "
             />
           </div>
 
@@ -38,7 +39,7 @@ export function Navbar() {
           >
             <img
               className={`${isOpen && 'hidden'}`}
-              src="/images/photo_2021-09-15_17-19-51.png"
+              src="/images/photo_2021-09-15_17-19-51.jpg"
               alt=""
             />
             x
