@@ -13,7 +13,7 @@ export function Index() {
     <>
       <Head>
         <title>Easybank</title>
-        <link rel="icon" href="/images/photo_2021-09-15_17-19-51.jpg" />
+        <link rel="icon" href="/favicon-32x32.png" />
       </Head>
       <Navbar />
       <div className="relative overflow-hidden">

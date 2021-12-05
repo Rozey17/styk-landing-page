@@ -1,8 +1,15 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const { join } = require('path');
 
+// available since Nx v 12.5
+const { createGlobPatternsForDependencies } = require('@nrwl/next/tailwind');
 module.exports = {
   mode: 'jit',
-  purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+  // purge: ['./components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
+  purge: [
+    join(__dirname, 'pages/**/*.{js,ts,jsx,tsx}'),
+    ...createGlobPatternsForDependencies(__dirname),
+  ],
   darkMode: false,
   theme: {
     extend: {

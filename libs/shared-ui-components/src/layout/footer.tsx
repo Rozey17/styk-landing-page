@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-gray-700 py-10">
+    <footer className="bg-primary-dark-blue py-10">
       <div className="container">
         <div className="text-center grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-12 lg:gap-0">
           <div className="flex flex-col justify-between lg:justify-self-start lg:col-span-3">

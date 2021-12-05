@@ -10,27 +10,19 @@ export function Navbar() {
       <div className="fixed z-50 top-0 w-full bg-white">
         <nav className="container flex justify-between items-center z-20">
           <div className="my-5 lg:my-6">
-            <img
-              src="/images/photo_2021-09-15_17-19-51.jpg"
-              alt="easybank logo"
-              className="h-8 "
-            />
+            <img src="/images/logo.svg" alt="easybank logo" />
           </div>
 
           <div className="hidden lg:block text-sm text-neutral-grayish-blue">
-            {navItems.map((navItem, index) => (
-              <a
-                key={index}
-                className="mx-3 py-5 hover:gradient-border-bottom"
-                href="#"
-              >
+            {navItems.map((navItem) => (
+              <a className="mx-3 py-5 hover:gradient-border-bottom" href="#">
                 {navItem}
               </a>
             ))}
           </div>
 
-          <button className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-white text-xs bg-gradient-to-r from-green-400 to-blue-500  focus:outline-none focus:ring ring-green-400">
-            S'enregistrer
+          <button className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400">
+            Request Invite
           </button>
 
           <button
@@ -39,15 +31,14 @@ export function Navbar() {
           >
             <img
               className={`${isOpen && 'hidden'}`}
-              src="/images/photo_2021-09-15_17-19-51.jpg"
+              src="/icons/icon-hamburger.svg"
               alt=""
             />
-            x
-            {/* <img
+            <img
               className={isOpen ? 'block' : 'hidden'}
               src="/icons/icon-close.svg"
               alt=""
-            /> */}
+            />
           </button>
         </nav>
       </div>
