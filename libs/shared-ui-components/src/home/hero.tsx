@@ -1,4 +1,7 @@
+import { useRouter } from 'next/router';
+
 export function Hero() {
+  const router = useRouter();
   return (
     <section id="hero" className="relative">
       <div className="bg-header-mobile bg-custom-mobile-header-size absolute w-full h-full bg-no-repeat lg:hidden"></div>
@@ -15,7 +18,10 @@ export function Hero() {
               one-stop-shop for spending, saving, budgeting, investing, and much
               more.
             </p>
-            <button className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400">
+            <button
+              onClick={() => router.push('/register')}
+              className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400"
+            >
               Request Invite
             </button>
           </div>
