@@ -11,10 +11,10 @@ import Head from 'next/head';
 export function Index() {
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Easybank</title>
         <link rel="icon" href="/favicon-32x32.png" />
-      </Head>
+      </Head> */}
       <Navbar />
       <div className="relative overflow-hidden">
         <div className="hidden lg:block w-full h-full absolute">

@@ -14,10 +14,6 @@ export function Index() {
   const router = useRouter();
   return (
     <>
-      <Head>
-        <title>Easybank</title>
-        <link rel="icon" href="/favicon-32x32.png" />
-      </Head>
       <Navbar />
       <div className="text-center uppercase font-semibold mt-20 text-neutral-grayish-blue">
         <span>Vous êtes ?</span>

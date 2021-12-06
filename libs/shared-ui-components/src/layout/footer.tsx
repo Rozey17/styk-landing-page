@@ -9,9 +9,9 @@ export function Footer() {
         <div className="text-center grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-12 lg:gap-0">
           <div className="flex flex-col justify-between lg:justify-self-start lg:col-span-3">
             <img
-              className="mb-7"
-              src="images/logo-white.svg"
-              alt="easybank logo"
+              src="/images/photo_2021-09-15_17-19-51.jpg"
+              alt="styk logo"
+              className="h-14 "
             />
             <div className="flex justify-between items-center">
               <svg

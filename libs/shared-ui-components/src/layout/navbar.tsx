@@ -1,9 +1,25 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { Modal } from 'antd';
+
 const navItems = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
 
 export function Navbar() {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   return (
@@ -11,24 +27,64 @@ export function Navbar() {
       <div className="fixed z-50 top-0 w-full bg-white">
         <nav className="container flex justify-between items-center z-20">
           <div className="my-5 lg:my-6">
-            <img src="/images/logo.svg" alt="easybank logo" />
+            <img
+              src="/images/photo_2021-09-15_17-19-51.jpg"
+              alt="styk logo"
+              className="h-14 "
+            />
           </div>
 
           <div className="hidden lg:block text-sm text-neutral-grayish-blue">
-            {navItems.map((navItem) => (
+            <a className="mx-3 py-5 hover:gradient-border-bottom" href="/">
+              Home
+            </a>
+            <a className="mx-3 py-5 hover:gradient-border-bottom" href="#">
+              About
+            </a>{' '}
+            <a className="mx-3 py-5 hover:gradient-border-bottom" href="#">
+              Contact
+            </a>{' '}
+            <a className="mx-3 py-5 hover:gradient-border-bottom" href="#">
+              Blog
+            </a>{' '}
+            <a className="mx-3 py-5 hover:gradient-border-bottom" href="#">
+              Careers
+            </a>
+            {/* {navItems.map((navItem) => (
               <a className="mx-3 py-5 hover:gradient-border-bottom" href="#">
                 {navItem}
               </a>
-            ))}
+            ))} */}
           </div>
 
           <button
-            onClick={() => router.push('/selectPage')}
-            className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400"
+            onClick={showModal}
+            // className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400"
+            className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
           >
-            Request Invite
+            Créer un compte
           </button>
-
+          <Modal
+            title="Basic Modal"
+            visible={isModalVisible}
+            onOk={handleOk}
+            onCancel={handleCancel}
+          >
+            <div className="text-center uppercase font-semibold text-neutral-grayish-blue">
+              <span>Vous êtes ?</span>
+              <div className="my-10 flex justify-center ">
+                <button
+                  onClick={() => router.push('/register')}
+                  className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400 mx-10"
+                >
+                  Un candidat
+                </button>
+                <button className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400 mx-10">
+                  Une auto école
+                </button>
+              </div>
+            </div>
+          </Modal>
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden focus:outline-none"

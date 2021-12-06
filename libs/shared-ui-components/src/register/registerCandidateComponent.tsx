@@ -6,7 +6,7 @@ import { Spinner } from '@chakra-ui/spinner';
 import { Field, Formik } from 'formik';
 import { string, object } from 'yup';
 
-export const RegisterComponent = () => {
+export const RegisterCandidateComponent = () => {
   // const [loading, setLoading] = useState(false);
 
   const router = useRouter();

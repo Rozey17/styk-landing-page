@@ -1,1 +1,1 @@
-export * from './registerComponent';
+export * from './registerCandidateComponent';
