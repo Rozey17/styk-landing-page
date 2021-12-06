@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Modal } from 'antd';
-
+import Link from 'next/link';
 const navItems = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
 
 export function Navbar() {
@@ -35,9 +35,13 @@ export function Navbar() {
           </div>
 
           <div className="hidden lg:block text-sm text-neutral-grayish-blue">
-            <a className="mx-3 py-5 hover:gradient-border-bottom" href="/">
-              Home
-            </a>
+            <Link href="/">
+              <a className="mx-3 py-5 hover:gradient-border-bottom">Home</a>
+            </Link>
+            {/* <Link></Link>
+            <Link></Link>
+            <Link></Link>
+            <Link></Link> */}
             <a className="mx-3 py-5 hover:gradient-border-bottom" href="#">
               About
             </a>{' '}
@@ -62,7 +66,7 @@ export function Navbar() {
             // className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400"
             className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
           >
-            Créer un compte
+            Se Connecter
           </button>
           <Modal
             title="Basic Modal"
@@ -74,7 +78,7 @@ export function Navbar() {
               <span>Vous êtes ?</span>
               <div className="my-10 flex justify-center ">
                 <button
-                  onClick={() => router.push('/register')}
+                  onClick={() => router.push('/login')}
                   className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400 mx-10"
                 >
                   Un candidat
