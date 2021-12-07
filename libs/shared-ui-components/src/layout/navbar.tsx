@@ -24,7 +24,7 @@ export function Navbar() {
   const router = useRouter();
   return (
     <>
-      <div className="fixed z-50 top-0 w-full bg-white">
+      <div className="fixed z-50 top-0 w-full bg-white border border-b-1 ">
         <nav className="container flex justify-between items-center z-20">
           <div className="my-5 lg:my-6">
             <img
@@ -60,35 +60,42 @@ export function Navbar() {
               </a>
             ))} */}
           </div>
-
-          <button
-            onClick={showModal}
-            // className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400"
-            className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
-          >
-            Se Connecter
-          </button>
-          <Modal
-            title="Basic Modal"
-            visible={isModalVisible}
-            onOk={handleOk}
-            onCancel={handleCancel}
-          >
-            <div className="text-center uppercase font-semibold text-neutral-grayish-blue">
-              <span>Vous êtes ?</span>
-              <div className="my-10 flex justify-center ">
-                <button
-                  onClick={() => router.push('/login')}
-                  className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400 mx-10"
-                >
-                  Un candidat
-                </button>
-                <button className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400 mx-10">
-                  Une auto école
-                </button>
+          <span className="flex items-center">
+            <Link href="/register">
+              <a className="text-neutral-grayish-blue text-sm font-semibold mr-3">
+                S'enregistrer
+              </a>
+            </Link>
+            <button
+              onClick={showModal}
+              // className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400"
+              className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
+            >
+              Se Connecter
+            </button>
+            <Modal
+              title="Basic Modal"
+              visible={isModalVisible}
+              onOk={handleOk}
+              onCancel={handleCancel}
+            >
+              <div className="text-center uppercase font-semibold text-neutral-grayish-blue">
+                <span>Vous êtes ?</span>
+                <div className="my-10 flex justify-center ">
+                  <button
+                    onClick={() => router.push('/login')}
+                    className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400 mx-10"
+                  >
+                    Un candidat
+                  </button>
+                  <button className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400 mx-10">
+                    Une auto école
+                  </button>
+                </div>
               </div>
-            </div>
-          </Modal>
+            </Modal>
+          </span>
+
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden focus:outline-none"
