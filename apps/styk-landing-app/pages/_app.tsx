@@ -6,8 +6,6 @@ import { IntlProvider } from 'react-intl';
 import { useRouter } from 'next/router';
 import { messages } from '@styk-landing-app/utils';
 
-// import { ChakraProvider } from '@chakra-ui/react';
-
 const App = ({ Component, pageProps }: AppProps) => {
   const { locale } = useRouter();
 
