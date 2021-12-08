@@ -26,19 +26,21 @@
       }
     ]
   },
-  "projects": {
-    "shared-ui-components": {
-      "tags": []
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
     },
-    "styk-landing-app": {
-      "tags": []
-    },
-    "styk-landing-app-e2e": {
-      "tags": [],
-      "implicitDependencies": ["styk-landing-app"]
-    },
-    "utils": {
-      "tags": []
+    "@nrwl/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
     }
-  }
+  },
+  "defaultProject": "styk-landing-app"
 }

@@ -22,7 +22,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     },
     "styk-landing-app": {
       "root": "apps/styk-landing-app",
@@ -73,7 +74,8 @@
             "lintFilePatterns": ["apps/styk-landing-app/**/*.{ts,tsx,js,jsx}"]
           }
         }
-      }
+      },
+      "tags": []
     },
     "styk-landing-app-e2e": {
       "root": "apps/styk-landing-app-e2e",
@@ -99,7 +101,9 @@
             "lintFilePatterns": ["apps/styk-landing-app-e2e/**/*.{js,ts}"]
           }
         }
-      }
+      },
+      "tags": [],
+      "implicitDependencies": ["styk-landing-app"]
     },
     "utils": {
       "root": "libs/utils",
@@ -120,24 +124,8 @@
             "passWithNoTests": true
           }
         }
-      }
+      },
+      "tags": []
     }
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "babel": true
-      }
-    },
-    "@nrwl/next": {
-      "application": {
-        "style": "css",
-        "linter": "eslint"
-      }
-    }
-  },
-  "defaultProject": "styk-landing-app"
+  }
 }

@@ -13,8 +13,8 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <IntlProvider
-      locale={locale ?? ''}
-      // locale="fr"
+      // locale={locale ?? ''}
+      locale="fr"
       messages={messages[locale ?? '']}
       defaultLocale={locale}
     >
