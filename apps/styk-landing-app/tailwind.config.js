@@ -33,6 +33,8 @@ module.exports = {
         'header-desktop': "url('/images/bg-intro-desktop.svg')",
         'header-mobile': "url('/images/bg-intro-mobile.svg')",
         'image-mockups': "url('/images/image-mockups.png')",
+        'image-driving-school':
+          "url('/images/preview-xl-removebg-preview.png')",
       }),
       backgroundSize: {
         'custom-mobile-header-size': '100% 50%',

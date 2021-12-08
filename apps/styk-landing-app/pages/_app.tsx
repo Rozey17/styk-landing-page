@@ -2,21 +2,29 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/tailwind.css';
 import 'antd/dist/antd.css';
+import { IntlProvider } from 'react-intl';
+import { useRouter } from 'next/router';
+import { messages } from '@styk-landing-app/utils';
 
 // import { ChakraProvider } from '@chakra-ui/react';
 
-function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
+  const { locale } = useRouter();
+
   return (
-    <>
-      <Head>
+    <IntlProvider
+      locale={locale ?? ''}
+      // locale="fr"
+      messages={messages[locale ?? '']}
+      defaultLocale={locale}
+    >
+      {/* <Head>
         <title>Styk</title>
         <link rel="icon" href="/images/favicon-32x32.png" />
-      </Head>
+      </Head> */}
       <Component {...pageProps} />
-    </>
-    // <ChakraProvider>
-    // </ChakraProvider>
+    </IntlProvider>
   );
-}
+};
 
 export default App;

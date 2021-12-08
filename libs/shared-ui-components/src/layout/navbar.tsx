@@ -4,9 +4,13 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { Modal } from 'antd';
 import Link from 'next/link';
+import { FormattedMessage, useIntl } from 'react-intl';
+import { LocaleSwitcher } from '../localeSwitcher';
 const navItems = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
 
 export function Navbar() {
+  const { formatMessage: f } = useIntl();
+
   const [isModalVisible, setIsModalVisible] = useState(false);
   const showModal = () => {
     setIsModalVisible(true);
@@ -63,7 +67,14 @@ export function Navbar() {
           <span className="flex items-center">
             <Link href="/register">
               <a className="text-neutral-grayish-blue text-sm font-semibold mr-3">
-                S'enregistrer
+                {/* <FormattedMessage
+                  id="login"
+                  defaultMessage="Login"
+                  description="..."
+                  // defaultMessage="Today is {ts, date, ::yyyyMMdd}"
+                  // values={{ ts: Date.now() }}
+                /> */}
+                {f({ id: 'login' })}
               </a>
             </Link>
             <button
@@ -71,7 +82,7 @@ export function Navbar() {
               // className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400"
               className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
             >
-              Se Connecter
+              {f({ id: 'login' })}
             </button>
             <Modal
               title="Basic Modal"
@@ -95,7 +106,7 @@ export function Navbar() {
               </div>
             </Modal>
           </span>
-
+          <LocaleSwitcher />
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden focus:outline-none"
