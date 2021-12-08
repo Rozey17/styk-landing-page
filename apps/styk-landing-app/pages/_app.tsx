@@ -18,10 +18,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       messages={messages[locale ?? '']}
       defaultLocale={locale}
     >
-      {/* <Head>
+      <Head>
         <title>Styk</title>
         <link rel="icon" href="/images/favicon-32x32.png" />
-      </Head> */}
+      </Head>
       <Component {...pageProps} />
     </IntlProvider>
   );
