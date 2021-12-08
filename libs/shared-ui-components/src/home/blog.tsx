@@ -3,7 +3,7 @@ const articles = [
     author: 'By Claire Robinson',
     title: 'Receive money in any currency with no fees',
     description:
-      'The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …',
+      'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia illum vitae omnis consequuntur distinctio minus esse molestiae.',
     imgPath: '/images/image-currency.jpg',
     imgAlt: 'multiple bills with different values and currencies',
   },
@@ -11,7 +11,7 @@ const articles = [
     author: 'By Wilson Hutton',
     title: 'Treat yourself without worrying about money',
     description:
-      'Our simple budgeting feature allows you to separate out your spending and set realistic limits each month. That means you …',
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi ullam repellendus aut beatae, ipsam nemo nobis?',
     imgPath: '/images/image-restaurant.jpg',
     imgAlt: 'someone eating a hamburguer in a restaurant',
   },
@@ -19,7 +19,7 @@ const articles = [
     author: 'By Wilson Hutton',
     title: 'Take your Easybank card wherever you go',
     description:
-      'We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad. We’ll even show you …',
+      'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga nisi natus nulla explicabo culpa in ducimus.',
     imgPath: '/images/image-plane.jpg',
     imgAlt: 'A plane in the sky',
   },
@@ -27,7 +27,7 @@ const articles = [
     author: 'By Claire Robinson',
     title: 'Our invite-only Beta accounts are now live!',
     description:
-      'After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request an invite through the site ...',
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil deleniti quaerat delectus harum tenetur. Laudantium, aliquid?',
     imgPath: '/images/image-confetti.jpg',
     imgAlt: 'Falling confetti',
   },
