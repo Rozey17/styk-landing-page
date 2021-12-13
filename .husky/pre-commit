@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn build && git add .
+nx run styk-landing-app:build && git add .

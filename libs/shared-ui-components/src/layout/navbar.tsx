@@ -9,7 +9,7 @@ import { LocaleSwitcher } from '../localeSwitcher';
 const navItems = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
 
 export function Navbar() {
-  // const { formatMessage: f } = useIntl();
+  const { formatMessage: f } = useIntl();
 
   const [isModalVisible, setIsModalVisible] = useState(false);
   const showModal = () => {
@@ -83,8 +83,7 @@ export function Navbar() {
               // className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400"
               className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
             >
-              {/* {f({ id: 'login' })} */}
-              Se connecter
+              {f({ id: 'login' })}
             </button>
             <Modal
               title="Basic Modal"
@@ -113,7 +112,7 @@ export function Navbar() {
               </div>
             </Modal>
           </span>
-          {/* <LocaleSwitcher /> */}
+          <LocaleSwitcher />
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden focus:outline-none"
