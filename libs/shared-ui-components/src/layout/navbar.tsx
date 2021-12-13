@@ -9,7 +9,7 @@ import { LocaleSwitcher } from '../localeSwitcher';
 const navItems = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
 
 export function Navbar() {
-  const { formatMessage: f } = useIntl();
+  // const { formatMessage: f } = useIntl();
 
   const [isModalVisible, setIsModalVisible] = useState(false);
   const showModal = () => {
@@ -74,7 +74,8 @@ export function Navbar() {
                   // defaultMessage="Today is {ts, date, ::yyyyMMdd}"
                   // values={{ ts: Date.now() }}
                 /> */}
-                {f({ id: 'login' })}
+                {/* {f({ id: 'login' })} */}
+                S'enregistrer
               </a>
             </Link>
             <button
@@ -82,7 +83,8 @@ export function Navbar() {
               // className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400"
               className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
             >
-              {f({ id: 'login' })}
+              {/* {f({ id: 'login' })} */}
+              Se connecter
             </button>
             <Modal
               title="Basic Modal"
@@ -95,18 +97,23 @@ export function Navbar() {
                 <div className="my-10 flex justify-center ">
                   <button
                     onClick={() => router.push('/login')}
-                    className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400 mx-10"
+                    className="bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness mb-7 focus:outline-none focus:ring ring-blue-400 mx-10"
                   >
                     Un candidat
                   </button>
-                  <button className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400 mx-10">
+                  <button
+                    onClick={() =>
+                      router.push(`${process.env.NX_CONSUMER_APP_URL}`)
+                    }
+                    className="bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness mb-7 focus:outline-none focus:ring ring-blue-400 mx-10"
+                  >
                     Une auto école
                   </button>
                 </div>
               </div>
             </Modal>
           </span>
-          <LocaleSwitcher />
+          {/* <LocaleSwitcher /> */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden focus:outline-none"
