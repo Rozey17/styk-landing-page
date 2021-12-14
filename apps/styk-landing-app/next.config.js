@@ -19,42 +19,45 @@ const withPlugin = require('next-compose-plugins');
 
 module.exports = () => {
   return withCCss(
-      withLess({
-        // cssModules: true,
-        webpack5: false,
-        loader: 'less-loader',
-        lessLoaderOptions: {
-          javascriptEnabled: true,
-          // modifyVars: themeVariables, // make your antd custom effective
-        },
-        i18n: {
-          locales: ['fr', 'en'],
-          defaultLocale: 'fr',
-        },
-        webpack: (config, { isServer }) => {
-          if (isServer) {
-            const antStyles = /antd\/.*?\/style.*?/;
-            const origExternals = [...config.externals];
-            config.externals = [
-              (context, request, callback) => {
-                if (request.match(antStyles)) return callback();
-                if (typeof origExternals[0] === 'function') {
-                  origExternals[0](context, request, callback);
-                } else {
-                  callback();
-                }
-              },
-              ...(typeof origExternals[0] === 'function' ? [] : origExternals),
-            ];
-            config.module.rules.unshift({
-              test: antStyles,
-              use: 'null-loader',
-            });
-          }
-          return config;
-        },
-      })
-    )
+    withLess({
+      // cssModules: true,
+      webpack5: false,
+      loader: 'less-loader',
+      lessLoaderOptions: {
+        javascriptEnabled: true,
+        // modifyVars: themeVariables, // make your antd custom effective
+      },
+      env: {
+        NX_CONSUMER_APP_URL: process.env.NX_CONSUMER_APP_URL,
+      },
+      i18n: {
+        locales: ['fr', 'en'],
+        defaultLocale: 'fr',
+      },
+      webpack: (config, { isServer }) => {
+        if (isServer) {
+          const antStyles = /antd\/.*?\/style.*?/;
+          const origExternals = [...config.externals];
+          config.externals = [
+            (context, request, callback) => {
+              if (request.match(antStyles)) return callback();
+              if (typeof origExternals[0] === 'function') {
+                origExternals[0](context, request, callback);
+              } else {
+                callback();
+              }
+            },
+            ...(typeof origExternals[0] === 'function' ? [] : origExternals),
+          ];
+          config.module.rules.unshift({
+            test: antStyles,
+            use: 'null-loader',
+          });
+        }
+        return config;
+      },
+    })
+  );
 };
 
 

@@ -6,6 +6,7 @@ import { Modal } from 'antd';
 import Link from 'next/link';
 import { FormattedMessage, useIntl } from 'react-intl';
 import { LocaleSwitcher } from '../localeSwitcher';
+import { CONSUMER_APP_URL } from '@styk-landing-app/utils';
 const navItems = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
 
 export function Navbar() {
@@ -101,9 +102,7 @@ export function Navbar() {
                     Un candidat
                   </button>
                   <button
-                    onClick={() =>
-                      router.push(`${process.env.NX_CONSUMER_APP_URL}`)
-                    }
+                    onClick={() => router.push(`${CONSUMER_APP_URL}`)}
                     className="bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness mb-7 focus:outline-none focus:ring ring-blue-400 mx-10"
                   >
                     Une auto école
