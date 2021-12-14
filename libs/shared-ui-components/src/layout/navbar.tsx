@@ -2,29 +2,14 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import { Modal } from 'antd';
 import Link from 'next/link';
-import { FormattedMessage, useIntl } from 'react-intl';
+import { useIntl } from 'react-intl';
 import { LocaleSwitcher } from '../localeSwitcher';
 import { CONSUMER_APP_URL } from '@styk-landing-app/utils';
 const navItems = ['Home', 'About', 'Contact', 'Blog', 'Careers'];
 
 export function Navbar() {
   const { formatMessage: f } = useIntl();
-
-  const [isModalVisible, setIsModalVisible] = useState(false);
-  const showModal = () => {
-    setIsModalVisible(true);
-  };
-
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalVisible(false);
-  };
-
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   return (
@@ -65,36 +50,11 @@ export function Navbar() {
               </a>
             </Link>
             <button
-              onClick={showModal}
-              // className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400"
+              onClick={() => router.push(`${CONSUMER_APP_URL}`)}
               className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
             >
               {f({ id: 'LOGIN' })}
             </button>
-            <Modal
-              title="Basic Modal"
-              visible={isModalVisible}
-              onOk={handleOk}
-              onCancel={handleCancel}
-            >
-              <div className="text-center uppercase font-semibold text-neutral-grayish-blue">
-                <span>Vous êtes ?</span>
-                <div className="my-10 flex justify-center ">
-                  <button
-                    onClick={() => router.push('/login')}
-                    className="bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness mb-7 focus:outline-none focus:ring ring-blue-400 mx-10"
-                  >
-                    Un candidat
-                  </button>
-                  <button
-                    onClick={() => router.push(`${CONSUMER_APP_URL}`)}
-                    className="bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness mb-7 focus:outline-none focus:ring ring-blue-400 mx-10"
-                  >
-                    Une auto école
-                  </button>
-                </div>
-              </div>
-            </Modal>
           </span>
           <LocaleSwitcher />
           <button
