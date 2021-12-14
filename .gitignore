@@ -38,10 +38,10 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# # PWA files
-# **/apps/styk-landing-app/.next/sw.js
-# **/apps/styk-landing-app/.next/workbox-*.js
-# **/apps/styk-landing-app/.next/sw.js.map
-# **/apps/styk-landing-app/.next/workbox-*.js.map
-# **/apps/styk-landing-app/.next/worker-*.js
-# **/apps/styk-landing-app/.next/worker-*.js.map
+# PWA files
+**/public/sw.js
+**/public/workbox-*.js
+**/public/sw.js.map
+**/public/workbox-*.js.map
+**/public/worker-*.js
+**/public/worker-*.js.map

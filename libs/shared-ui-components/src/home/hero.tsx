@@ -1,7 +1,10 @@
 import { useRouter } from 'next/router';
+import { useIntl } from 'react-intl';
 
 export function Hero() {
   const router = useRouter();
+  const { formatMessage: f } = useIntl();
+
   return (
     <section id="hero" className="relative">
       <div className="bg-header-mobile bg-custom-mobile-header-size absolute w-full h-full bg-no-repeat lg:hidden"></div>
@@ -25,7 +28,7 @@ export function Hero() {
               className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
               // className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400"
             >
-              Créer un compte
+              {f({ id: 'CREATE_ACCOUNT' })}
             </button>
           </div>
         </div>
