@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import '../styles/tailwind.css';
-import 'antd/dist/antd.css';
+// import 'antd/dist/antd.css';
 import { IntlProvider } from 'react-intl';
 import { useRouter } from 'next/router';
 import { messages } from '@styk-landing-app/utils';

@@ -1,7 +1,9 @@
 import { useRouter } from 'next/router';
+import { useIntl } from 'react-intl';
 
 export function Footer() {
   const router = useRouter();
+  const { formatMessage: f } = useIntl();
 
   return (
     <footer className="bg-primary-dark-blue py-10">
@@ -64,7 +66,7 @@ export function Footer() {
 
           <div className="grid grid-cols-1 gap-2 py-1 lg:grid-rows-3 text-white text-sm lg:text-left lg:justify-self-start lg:col-span-5 lg:gap-x-24 lg:grid-flow-col-dense">
             <a className="hover:text-green-400" href="#">
-              About Us
+              {f({ id: 'ABOUT_US' })}
             </a>
             <a className="hover:text-green-400" href="#">
               Contact
@@ -73,13 +75,13 @@ export function Footer() {
               Blog
             </a>
             <a className="hover:text-green-400" href="#">
-              Careers
+              {f({ id: 'CAREERS' })}
             </a>
             <a className="hover:text-green-400" href="#">
               Support
             </a>
             <a className="hover:text-green-400" href="#">
-              Privacy Policy
+              {f({ id: 'PRIVACY_POLICY' })}
             </a>
           </div>
 
@@ -89,7 +91,7 @@ export function Footer() {
               className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
               // className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400"
             >
-              Créer un compte
+              {f({ id: 'CREATE_ACCOUNT' })}
             </button>
 
             <p className="text-neutral-grayish-blue text-sm">

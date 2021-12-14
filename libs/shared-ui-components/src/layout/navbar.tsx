@@ -41,14 +41,12 @@ export function Navbar() {
 
           <div className="hidden lg:block text-sm text-neutral-grayish-blue">
             <Link href="/">
-              <a className="mx-3 py-5 hover:gradient-border-bottom">Home</a>
+              <a className="mx-3 py-5 hover:gradient-border-bottom">
+                {f({ id: 'HOME' })}
+              </a>
             </Link>
-            {/* <Link></Link>
-            <Link></Link>
-            <Link></Link>
-            <Link></Link> */}
             <a className="mx-3 py-5 hover:gradient-border-bottom" href="#">
-              About
+              {f({ id: 'ABOUT_US' })}
             </a>{' '}
             <a className="mx-3 py-5 hover:gradient-border-bottom" href="#">
               Contact
@@ -57,26 +55,13 @@ export function Navbar() {
               Blog
             </a>{' '}
             <a className="mx-3 py-5 hover:gradient-border-bottom" href="#">
-              Careers
+              {f({ id: 'CAREERS' })}
             </a>
-            {/* {navItems.map((navItem) => (
-              <a className="mx-3 py-5 hover:gradient-border-bottom" href="#">
-                {navItem}
-              </a>
-            ))} */}
           </div>
           <span className="flex items-center">
             <Link href="/register">
               <a className="text-neutral-grayish-blue text-sm font-semibold mr-3">
-                {/* <FormattedMessage
-                  id="login"
-                  defaultMessage="Login"
-                  description="..."
-                  // defaultMessage="Today is {ts, date, ::yyyyMMdd}"
-                  // values={{ ts: Date.now() }}
-                /> */}
-                {/* {f({ id: 'login' })} */}
-                S'enregistrer
+                {f({ id: 'SIGN_UP' })}
               </a>
             </Link>
             <button
@@ -84,7 +69,7 @@ export function Navbar() {
               // className="hidden lg:block bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness focus:outline-none focus:ring ring-green-400"
               className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
             >
-              {f({ id: 'login' })}
+              {f({ id: 'LOGIN' })}
             </button>
             <Modal
               title="Basic Modal"
