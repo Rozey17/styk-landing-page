@@ -60,7 +60,7 @@ export function Navbar() {
           </div>
           <span className="flex items-center">
             <Link href="/register">
-              <a className="text-neutral-grayish-blue text-sm font-semibold mr-3">
+              <a className="text-neutral-grayish-blue text-sm mr-3">
                 {f({ id: 'SIGN_UP' })}
               </a>
             </Link>
