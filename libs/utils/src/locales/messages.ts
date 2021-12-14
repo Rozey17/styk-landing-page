@@ -11,6 +11,7 @@ export const messages = {
     PRIVACY_POLICY: 'Privacy policy',
     USERNAME: 'Username',
     PASSWORD: 'Password',
+    LATEST_ARTICLES: 'Latest articles',
   },
 
   fr: {
@@ -25,5 +26,6 @@ export const messages = {
     PRIVACY_POLICY: 'Politique de confidentialité',
     USERNAME: "Nom d'utilisateur",
     PASSWORD: 'Mot de passe',
+    LATEST_ARTICLES: 'Derniers articles',
   },
 };

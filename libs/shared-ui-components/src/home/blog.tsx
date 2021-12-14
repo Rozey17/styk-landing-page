@@ -1,7 +1,9 @@
+import { useIntl } from 'react-intl';
+
 const articles = [
   {
     author: 'By Claire Robinson',
-    title: 'Receive money in any currency with no fees',
+    title: 'Lorem ipsum dolor sit amet consectetur.',
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia illum vitae omnis consequuntur distinctio minus esse molestiae.',
     imgPath: '/images/image-instructor.jpg',
@@ -9,7 +11,7 @@ const articles = [
   },
   {
     author: 'By Wilson Hutton',
-    title: 'Treat yourself without worrying about money',
+    title: 'Lorem ipsum dolor sit amet consectetur.',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi ullam repellendus aut beatae, ipsam nemo nobis?',
     imgPath: '/images/image-training.jpg',
@@ -17,7 +19,7 @@ const articles = [
   },
   {
     author: 'By Wilson Hutton',
-    title: 'Take your Easybank card wherever you go',
+    title: 'Lorem ipsum dolor, sit amet consectetur adipisicing.',
     description:
       'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga nisi natus nulla explicabo culpa in ducimus.',
     imgPath: '/images/image-student.jpg',
@@ -25,7 +27,7 @@ const articles = [
   },
   {
     author: 'By Claire Robinson',
-    title: 'Our invite-only Beta accounts are now live!',
+    title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil deleniti quaerat delectus harum tenetur. Laudantium, aliquid?',
     imgPath: '/images/driving-instructor1.png',
@@ -34,11 +36,13 @@ const articles = [
 ];
 
 export function Blog() {
+  const { formatMessage: f } = useIntl();
+
   return (
     <section className="py-14 lg:py-24">
       <div className="container">
         <h2 className="text-center text-3xl lg:text-4xl text-primary-dark-blue mb-5 lg:text-left lg:mb-10">
-          Latest Articles
+          {f({ id: 'LATEST_ARTICLES' })}
         </h2>
         <div className="grid grid-cols-1 gap-5 lg:gap-7 lg:grid-cols-4">
           {articles.map((article) => (
