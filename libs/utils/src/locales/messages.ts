@@ -12,6 +12,9 @@ export const messages = {
     USERNAME: 'Username',
     PASSWORD: 'Password',
     LATEST_ARTICLES: 'Latest articles',
+    MANDATORY: 'This field is mandatory',
+    BIRTHDATE: 'Birthdate',
+    PHONE: 'Phone',
   },
 
   fr: {
@@ -27,5 +30,8 @@ export const messages = {
     USERNAME: "Nom d'utilisateur",
     PASSWORD: 'Mot de passe',
     LATEST_ARTICLES: 'Derniers articles',
+    MANDATORY: 'Ce champ est obligatoire',
+    BIRTHDATE: 'Date de naissance',
+    PHONE: 'Téléphone',
   },
 };
