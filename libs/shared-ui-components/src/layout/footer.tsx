@@ -11,9 +11,10 @@ export function Footer() {
         <div className="text-center grid grid-cols-1 justify-items-center gap-6 lg:grid-cols-12 lg:gap-0">
           <div className="flex flex-col justify-between lg:justify-self-start lg:col-span-3">
             <img
-              src="/images/photo_2021-09-15_17-19-51.jpg"
+              src="/images/remove-bg.png"
               alt="styk logo"
-              className="h-14 "
+              height={40}
+              width={40}
             />
             <div className="flex justify-between items-center">
               <svg
