@@ -80,7 +80,7 @@ export function Navbar() {
         className={`fixed inset-0 z-30 bg-gray-800 
       bg-opacity-50 ${isOpen ? 'block' : 'hidden'}`}
       >
-        <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded">
+        <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 space-y-2 rounded">
           <div className="flex items-center justify-center py-3">
             <button
               onClick={() => router.push('/register')}
@@ -96,18 +96,18 @@ export function Navbar() {
             </button>
           </div>
           <Link href="/">
-            <a className="py-2">{f({ id: 'HOME' })}</a>
+            <a className="">{f({ id: 'HOME' })}</a>
           </Link>
-          <a className="py-2" href="#">
+          <a className="" href="#">
             {f({ id: 'ABOUT_US' })}
           </a>{' '}
-          <a className="py-2" href="#">
+          <a className="" href="#">
             Contact
           </a>{' '}
-          <a className="py-2" href="#">
+          <a className="" href="#">
             Blog
           </a>{' '}
-          <a className="py-2" href="#">
+          <a className="" href="#">
             {f({ id: 'CAREERS' })}
           </a>
           {/* {navItems.map((navItem) => (

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
