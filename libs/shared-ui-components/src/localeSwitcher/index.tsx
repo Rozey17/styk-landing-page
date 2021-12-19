@@ -20,7 +20,7 @@ const LocaleSwitcher: React.FC = () => {
   return (
     <Select
       defaultValue={locale}
-      style={{ width: 100 }}
+      // style={{ width: 100 }}
       onChange={changeLang}
       suffixIcon={<CaretDownOutlined />}
     >

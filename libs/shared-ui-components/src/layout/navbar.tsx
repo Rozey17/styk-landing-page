@@ -43,7 +43,7 @@ export function Navbar() {
               {f({ id: 'CAREERS' })}
             </a>
           </div>
-          <span className="flex items-center">
+          <span className="hidden lg:block flex items-center">
             <Link href="/register">
               <a className="text-neutral-grayish-blue text-sm mr-3">
                 {f({ id: 'SIGN_UP' })}
@@ -51,7 +51,7 @@ export function Navbar() {
             </Link>
             <button
               onClick={() => router.push(`${CONSUMER_APP_URL}`)}
-              className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
+              className="bg-indigo-500 laptop:px-7 laptop:py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
             >
               {f({ id: 'LOGIN' })}
             </button>
@@ -81,11 +81,40 @@ export function Navbar() {
       bg-opacity-50 ${isOpen ? 'block' : 'hidden'}`}
       >
         <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 rounded">
-          {navItems.map((navItem) => (
+          <div className="flex items-center justify-center py-3">
+            <button
+              onClick={() => router.push('/register')}
+              className="mr-3 px-3 py-2 bg-indigo-500 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
+            >
+              {f({ id: 'SIGN_UP' })}
+            </button>
+            <button
+              onClick={() => router.push(`${CONSUMER_APP_URL}`)}
+              className="px-3 py-2 bg-indigo-500  rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
+            >
+              {f({ id: 'LOGIN' })}
+            </button>
+          </div>
+          <Link href="/">
+            <a className="py-2">{f({ id: 'HOME' })}</a>
+          </Link>
+          <a className="py-2" href="#">
+            {f({ id: 'ABOUT_US' })}
+          </a>{' '}
+          <a className="py-2" href="#">
+            Contact
+          </a>{' '}
+          <a className="py-2" href="#">
+            Blog
+          </a>{' '}
+          <a className="py-2" href="#">
+            {f({ id: 'CAREERS' })}
+          </a>
+          {/* {navItems.map((navItem) => (
             <a key={navItem} className="py-2" href="#">
               {navItem}
             </a>
-          ))}
+          ))} */}
         </div>
       </div>
     </>
