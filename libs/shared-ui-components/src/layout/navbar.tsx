@@ -43,9 +43,9 @@ export function Navbar() {
               {f({ id: 'CAREERS' })}
             </a>
           </div>
-          <span className="hidden lg:block flex items-center">
+          <span className="hidden lg:block items-center">
             <Link href="/register">
-              <a className="text-neutral-grayish-blue text-sm mr-3">
+              <a className="text-neutral-grayish-blue text-sm mr-3 hover:gradient-border-bottom">
                 {f({ id: 'SIGN_UP' })}
               </a>
             </Link>
