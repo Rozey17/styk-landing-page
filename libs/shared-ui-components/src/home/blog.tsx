@@ -45,8 +45,8 @@ export function Blog() {
           {f({ id: 'LATEST_ARTICLES' })}
         </h2>
         <div className="grid grid-cols-1 gap-5 lg:gap-7 lg:grid-cols-4">
-          {articles.map((article) => (
-            <article key={article.title} className="bg-white">
+          {articles.map((article, index) => (
+            <article key={index} className="bg-white">
               <div className="aspect-w-16 aspect-h-10 lg:aspect-w-4 lg:aspect-h-3">
                 <img
                   className="object-cover"
