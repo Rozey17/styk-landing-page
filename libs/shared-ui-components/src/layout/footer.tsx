@@ -90,7 +90,7 @@ export function Footer() {
           <div className="flex flex-col justify-between items-center lg:items-end lg:justify-self-end lg:col-span-4">
             <button
               onClick={() => router.push('/register')}
-              className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
+              className="hidden lg:block bg-indigo-500 px-7 py-3 rounded-full text-neutral-white text-xs hover:scale-105 transform transition duration-500 hover:button-brightness focus:outline-none focus:ring ring-blue-400"
               // className="bg-primary-lime-green px-7 py-3 rounded-full text-neutral-white text-xs bg-gradient-to-r from-primary-lime-green to-primary-bright-cyan hover:button-brightness mb-7 focus:outline-none focus:ring ring-green-400"
             >
               {f({ id: 'CREATE_ACCOUNT' })}
