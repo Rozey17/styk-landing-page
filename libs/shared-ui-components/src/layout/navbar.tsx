@@ -44,13 +44,13 @@ export function Navbar() {
             </a>
           </div>
           <span className="hidden lg:block items-center">
-            <Link href="/register">
-              <a className="text-neutral-grayish-blue text-sm mr-3 hover:text-gray-800">
+            <Link href={`${CONSUMER_APP_URL}`}>
+              <a className="text-neutral-grayish-blue text-sm mr-3 hover:text-gray-600">
                 {f({ id: 'SIGN_UP' })}
               </a>
             </Link>
             {/* <button onClick={() => router.push(`${CONSUMER_APP_URL}`)}>
-              <a className="text-neutral-grayish-blue text-sm mr-3 hover:text-gray-800 ">
+              <a className="text-neutral-grayish-blue text-sm mr-3 hover:text-gray-700 ">
                 {f({ id: 'SIGN_UP' })}
               </a>
             </button> */}
