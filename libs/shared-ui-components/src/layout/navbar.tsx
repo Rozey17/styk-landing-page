@@ -45,13 +45,18 @@ export function Navbar() {
           </div>
           <span className="hidden lg:block items-center">
             <Link href="/register">
-              <a className="text-neutral-grayish-blue text-sm mr-3 hover:gradient-border-bottom">
+              <a className="text-neutral-grayish-blue text-sm mr-3 hover:text-gray-800">
                 {f({ id: 'SIGN_UP' })}
               </a>
             </Link>
+            {/* <button onClick={() => router.push(`${CONSUMER_APP_URL}`)}>
+              <a className="text-neutral-grayish-blue text-sm mr-3 hover:text-gray-800 ">
+                {f({ id: 'SIGN_UP' })}
+              </a>
+            </button> */}
             <button
               onClick={() => router.push(`${CONSUMER_APP_URL}`)}
-              className="bg-indigo-500 laptop:px-7 laptop:py-3 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
+              className="bg-indigo-500 laptop:px-7 laptop:py-3 rounded-full text-neutral-white text-xs hover:scale-105 transform transition duration-500 hover:button-brightness focus:outline-none focus:ring ring-blue-400"
             >
               {f({ id: 'LOGIN' })}
             </button>
@@ -83,7 +88,7 @@ export function Navbar() {
         <div className="bg-white text-primary-dark-blue flex flex-col text-center mx-5 my-20 py-4 space-y-2 rounded">
           <div className="flex items-center justify-center py-3">
             <button
-              onClick={() => router.push('/register')}
+              onClick={() => router.push(`${CONSUMER_APP_URL}`)}
               className="mr-3 px-3 py-2 bg-indigo-500 rounded-full text-neutral-white text-xs  hover:button-brightness focus:outline-none focus:ring ring-blue-400"
             >
               {f({ id: 'SIGN_UP' })}
